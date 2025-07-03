@@ -62,7 +62,7 @@ else
     private async Task AdicionarUsuario()
     {
         await UsuarioService.AddUsuarioAsync(novoUsuario);
-        novoUsuario = new(); // limpa campos
+        novoUsuario = new(); 
         await CarregarUsuarios();
     }
 

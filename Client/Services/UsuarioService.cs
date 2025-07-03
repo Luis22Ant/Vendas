@@ -14,17 +14,26 @@ namespace ProjetoVendas.Client.Services
 
         public async Task<List<Usuario>> GetUsuariosAsync()
         {
-            return await _http.GetFromJsonAsync<List<Usuario>>("api/usuarios") ?? new();
+            try
+            {
+                return await _http.GetFromJsonAsync<List<Usuario>>("https://localhost:7205/api/usuario") ?? new();
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                throw;
+            }
+          
         }
 
         public async Task AddUsuarioAsync(Usuario usuario)
         {
-            await _http.PostAsJsonAsync("api/usuarios", usuario);
+            await _http.PostAsJsonAsync("https://localhost:7205/api/usuario", usuario);
         }
 
         public async Task DeleteUsuarioAsync(int id)
         {
-            await _http.DeleteAsync($"api/usuarios/{id}");
+            await _http.DeleteAsync($"https://localhost:7205/api/usuario/{id}");
         }
     }
 }
