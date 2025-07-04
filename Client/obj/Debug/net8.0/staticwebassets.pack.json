@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\Client.styles.css"
     },
     {
+      "Id": "C:\\Users\\galoc\\Desktop\\ProjetoVendas\\Client\\wwwroot\\css\\Usuario.css",
+      "PackagePath": "staticwebassets\\css\\Usuario.css"
+    },
+    {
       "Id": "C:\\Users\\galoc\\Desktop\\ProjetoVendas\\Client\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },

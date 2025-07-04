@@ -1,0 +1,79 @@
+﻿    
+
+.tabela-usuarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+    .tabela-usuarios th, .tabela-usuarios td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .tabela-usuarios th {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .tabela-usuarios tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .tabela-usuarios tr:hover {
+        background-color: #f1f1f1;
+    }
+
+.btn-remover {
+    padding: 6px 12px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .btn-remover:hover {
+        background-color: #c82333;
+    }
+
+
+.form-usuario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.input-usuario, .select-usuario {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    min-width: 150px;
+    flex: 1;
+    max-width: 200px;
+}
+
+    .input-usuario:focus, .select-usuario:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 3px #007bff55;
+    }
+
+.btn-adicionar {
+    padding: 10px 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-adicionar:hover {
+        background-color: #218838;
+    }

@@ -5,14 +5,18 @@
 
 <h3>Usuários</h3>
 
-<input placeholder="Nome" @bind="novoUsuario.Nome" />
-<input placeholder="Login" @bind="novoUsuario.Login" />
-<input placeholder="Senha" @bind="novoUsuario.Senha" type="password" />
-<select @bind="novoUsuario.Tipo">
-    <option value="0">Admin</option>
-    <option value="1">User</option>
-</select>
-<button @onclick="AdicionarUsuario">Adicionar</button>
+<div class="form-usuario">
+    <input class="input-usuario" placeholder="Nome" @bind="novoUsuario.Nome" />
+    <input class="input-usuario" placeholder="Login" @bind="novoUsuario.Login" />
+    <input class="input-usuario" placeholder="Senha" @bind="novoUsuario.Senha" type="password" />
+
+    <select class="select-usuario" @bind="novoUsuario.Tipo">
+        <option value="0">Admin</option>
+        <option value="1">User</option>
+    </select>
+
+    <button class="btn-adicionar" @onclick="AdicionarUsuario">Adicionar</button>
+</div>
 
 <hr />
 
@@ -20,9 +24,13 @@
 {
     <p><em>Carregando...</em></p>
 }
+else if (usuarios.Count == 0)
+{
+    <h4>Nenhum usuário cadastrado!</h4>
+}
 else
 {
-    <table>
+    <table class="tabela-usuarios">
         <thead>
             <tr>
                 <th>Nome</th>
@@ -38,7 +46,7 @@ else
                     <td>@u.Nome</td>
                     <td>@u.Login</td>
                     <td>@u.Tipo</td>
-                    <td><button @onclick="() => RemoverUsuario(u.Id)">Remover</button></td>
+                    <td><button class="btn-remover" @onclick="() => RemoverUsuario(u.Id)">Remover</button></td>
                 </tr>
             }
         </tbody>
@@ -62,7 +70,7 @@ else
     private async Task AdicionarUsuario()
     {
         await UsuarioService.AddUsuarioAsync(novoUsuario);
-        novoUsuario = new(); 
+        novoUsuario = new();
         await CarregarUsuarios();
     }
 
